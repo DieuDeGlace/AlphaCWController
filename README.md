@@ -54,3 +54,9 @@ Edit AlphaController.ini and restart the mapper to change bindings or sensitivit
 
 
 Use Xbox-compatible Windows XInput. Steam Deck running Windows needs a driver exposing its controls as XInput. Inputs release on focus loss/disconnect. Do not run the standalone mapper alongside the DLL. Run `build\tests\AlphaController.exe --self-test`; controller input still needs verification with your own device.
+
+## Source formatting
+
+The project uses the checked-in `.clang-format` style (four-space indentation and a 100-column target). From the repository root, run `clang-format -i src/*.cpp src/*.h` on the source files that exist. Keep third-party SMAA files and embedded shader strings unchanged.
+
+The cleanup was rebuilt with MSVC for x86 and checked against the previous revision for identical executable tokens and shader strings. Runtime settings and installed DLLs are unchanged.
